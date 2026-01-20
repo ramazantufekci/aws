@@ -31,7 +31,7 @@ jobs:
       run: go test -v ./cmd/main.go
     - name: Archive
       run: |
-          apt install zip -y
+          sudo apt install zip -y
           zip -jrm build/bootstrap.zip bootstrap
           tar -cvzf build/main.tar.gz -C build main
           
