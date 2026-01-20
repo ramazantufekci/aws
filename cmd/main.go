@@ -1,6 +1,6 @@
 package main
 import (
-	"github.com/ramazantufekci/go-serverless/pkg/handlers"
+	"github.com/ramazantufekci/aws/pkg/handlers"
 	"os"
 	"github.com/aws/aws-lambda-go/events"
 	"github.com/aws/aws-sdk-go/aws/session"
