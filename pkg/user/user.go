@@ -1,7 +1,7 @@
 package user
 
 import(
-	"github.com/ramazantufekci/go-serverless/pkg/validators"
+	"github.com/ramazantufekci/aws/pkg/validators"
 	"encoding/json"
 	"errors"
 	"github.com/aws/aws-lambda-go/events"
