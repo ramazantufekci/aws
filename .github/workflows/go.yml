@@ -23,9 +23,19 @@ jobs:
 
     - name: Build
       run: |
-          go build -v ./cmd/main.go
-          ls -al
+          mkdir -p build
+          go build -o build/main ./cmd/main.go
 
     - name: Test
       run: go test -v ./cmd/main.go
+    - name: Archive
+      run: |
+          tar -cvzf build/main.tar.gz -C build main
+          
+    - name: Update Release
+      uses: softprops/action-gh-release@v1
+      permissions:
+        contents: write
+      with:
+        files: build/*.tar.gz
   
