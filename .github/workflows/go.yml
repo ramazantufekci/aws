@@ -35,5 +35,6 @@ jobs:
     - name: Update Release
       uses: softprops/action-gh-release@v1
       with:
+        version: latest
         files: build/*.tar.gz
   
