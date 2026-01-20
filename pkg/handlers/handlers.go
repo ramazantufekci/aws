@@ -1,7 +1,7 @@
 package handlers
 
 import(
-	"github.com/ramazantufekci/go-serverless/pkg/user"
+	"github.com/ramazantufekci/aws/pkg/user"
 	"net/http"
 	"github.com/aws/aws-lambda-go/events"
 	"github.com/aws/aws-sdk-go/service/dynamodb/dynamodbiface"
