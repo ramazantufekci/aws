@@ -24,17 +24,20 @@ jobs:
     - name: Build
       run: |
           mkdir -p build
+          go build -o bootstrap ./cmd
           go build -o build/main ./cmd/main.go
 
     - name: Test
       run: go test -v ./cmd/main.go
     - name: Archive
       run: |
+          apt install zip -y
+          zip -jrm build/bootstrap.zip bootstrap
           tar -cvzf build/main.tar.gz -C build main
           
     - name: Update Release
       uses: softprops/action-gh-release@v1
       with:
         version: latest
-        files: build/*.tar.gz
+        files: build/*.zip
   
