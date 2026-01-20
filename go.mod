@@ -1,4 +1,4 @@
-module github.com/ramazantufekci/go-serverless
+module github.com/ramazantufekci/aws
 
 go 1.15
 
